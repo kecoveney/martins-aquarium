@@ -1,0 +1,51 @@
+/* Main container setup */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add gap between sections */
+    justify-content: space-between;
+}
+
+/* Common styles for sections */
+#fishListRender, #tipList, #locationList {
+    border: 1px solid #000; /* Add a border around each section */
+    padding: 10px; /* Add padding inside each section */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+/* Flex styles for the fish and tips sections */
+#fishListRender, #tipList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc(50% - 10px); /* Set width for both sections with space for gap */
+}
+
+#tipList{
+    max-height: max-content;
+}
+
+/* Individual fish and tip items */
+#fishListRender > .fish, #tipList > .tip {
+    flex-basis: calc(50% - 10px); /* Set width for each item with space for gap */
+    margin-bottom: 20px; /* Adjust bottom margin */
+}
+
+/* Special styles for location list */
+#locationList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%; /* Make it take full width */
+}
+    
+#locationList > .locations {
+    flex-basis: calc(50% - 10px); /* Set width for each item to ensure two per row */
+    max-width: 500px; /* Ensure they do not exceed the desired size */
+    margin-bottom: 20px; /* Adjust bottom margin */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    padding: 5px; /* Add padding inside each location item */
+    border: 1px solid #000; /* Add border around each location item */
+    border-radius: 8px; /* Add rounded corners to each location item */
+    justify-content: left;
+}

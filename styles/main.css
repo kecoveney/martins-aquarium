@@ -1,0 +1,70 @@
+
+header {
+    text-align: center;
+    padding: 20px 0; /* Add some padding to the top and bottom */
+    border-top: 2px solid #000; /* Border above the title */
+    border-bottom: 2px solid #000; /* Border below the title */
+    margin-bottom: 20px; /* Space between header and main content */
+}
+
+header h1 {
+    margin: 0; /* Remove default margin from the h1 */
+    font-size: 2em; /* Adjust font size as needed */
+}
+.fish,
+.tip {
+    flex-basis: calc(50% - 10px); /* Two items per row with gap */
+    max-width: calc(50% - 10px); /* Ensure boxes do not exceed 50% width minus gap */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 10px; /* Add padding for inner spacing */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    text-align: center;
+}
+
+.fish:hover,
+.tip:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.fish_image {
+    max-width: 100%; /* Adjust image width to fill container */
+}
+
+.locations {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.location_image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.location__details {
+    padding: 10px;
+}
+
+.location__name {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.location__description {
+    font-size: 1em;
+    color: #666;
+}
